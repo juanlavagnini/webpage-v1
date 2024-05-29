@@ -7,33 +7,26 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 
-    const carousel = document.querySelector('.carousel');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+    const carouselContainer = document.querySelector('.carousel-container');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
 
-    carousel.addEventListener('mousedown', (e) => {
-        isDown = true;
-        carousel.classList.add('active');
-        startX = e.pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
+    function updateCarousel() {
+        const offset = -currentIndex * 100;
+        carouselContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+        updateCarousel();
     });
 
-    carousel.addEventListener('mouseleave', () => {
-        isDown = false;
-        carousel.classList.remove('active');
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
     });
 
-    carousel.addEventListener('mouseup', () => {
-        isDown = false;
-        carousel.classList.remove('active');
-    });
-
-    carousel.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 3; // Scroll speed
-        carousel.scrollLeft = scrollLeft - walk;
-    });
+    updateCarousel(); // Initialize carousel position
 });

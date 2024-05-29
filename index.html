@@ -16,65 +16,64 @@
                 <span class="bar"></span>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#gameplay">Gameplay</a></li>
-                <li><a href="#mini-games">Mini-Games</a></li>
                 <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section id="home">
         <h2>Introduction</h2>
-        <p>Blink and You’ll Miss It is a fast-paced mini-game collection...</p>
+        <p>Blink and You’ll Miss It is a fast-paced mini-game collection, the player will choose
+            their favorite character, and enter his/her story. The mini-games are funny and
+            relaxed, with different genres, perspectives, and control schemes. Each mini-game
+            will last less than 20 seconds. During this short period, the player needs to quickly
+            familiarize themselves with the mini-game, figure out what the win condition is, and
+            after completing it get ready for the next one.</p>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/N0lASV-fel8" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="carousel">
-            <!-- Add images here -->
-            <img src="https://github.com/juanlavagnini/webpage-v1/blob/main/Screenshot_20240524_130513_Game-Design-DH2650.jpg" alt="Image 1">
-            <img src="https://github.com/juanlavagnini/webpage-v1/blob/main/Screenshot_20240524_130527_Game-Design-DH2650.jpg" alt="Image 2">
-        </div>
+        
     </section>
     <section id="about">
         <h2>About the Game</h2>
-        <p>Game concept, genre, and target audience...</p>
-    </section>
-    <section id="gameplay">
-        <h2>Gameplay</h2>
-        <p>Explanation of gameplay and mechanics...</p>
-    </section>
-    <section id="mini-games">
-        <h2>Mini-Games</h2>
-        <div class="mini-game">
-            <h3>Find The Key</h3>
-            <p>Description, win/lose conditions, control system, level design, and art...</p>
+        <p>Every mini-game has a different way of being played, with dragging and touching
+            the screen being the most common methods. This is because the majority of the
+            games on the market utilize these interactions, so the player will be more familiar
+            with these types of controls. We are experimenting with other controls such as
+            tilting the phone or making use of the other sensors</p>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-item"><img src="img/Screenshot_20240524_130513_Game-Design-DH2650.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="img/Screenshot_20240524_130527_Game-Design-DH2650.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="img/Screenshot_20240524_130842_Game-Design-DH2650.jpg" alt="Image 3"></div>
+                <!-- Add more images here -->
+            </div>
+            <button class="carousel-button prev">‹</button>
+            <button class="carousel-button next">›</button>
         </div>
-        <!-- Add more mini-games here -->
     </section>
     <section id="team">
         <h2>Team</h2>
         <div class="team-member">
-            <img src="member1.jpg" alt="Team Member 1">
-            <p>Name and brief biography...</p>
+            <img src="profile_photos\profile.jpg" alt="Team Member 1">
+            <div>
+                <h3>Juan Lavagnini</h3>
+                <p>Computer Science engineer student from Buenos Aires</p>
+            </div>
         </div>
-        <!-- Add more team members here -->
+
+        <div class="team-member">
+            <img src="profile_photos\profile.jpg" alt="Team Member 1">
+            <div>
+                <h3>Juan Lavagnini</h3>
+                <p>Computer Science engineer student from Buenos Aires</p>
+            </div>
+        </div>
+        
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <form action="submit_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+    
     <footer>
-        <p>&copy; 2024 Blink and You’ll Miss It Team. All rights reserved.</p>
+        <p>&copy; 2024 Blink and You’ll Miss It Team.</p>
     </footer>
     <script src="scripts.js"></script>
 </body>

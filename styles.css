@@ -67,28 +67,64 @@ section {
 }
 
 .carousel {
-    display: flex;
-    overflow-x: scroll;
-    gap: 1em;
+    position: relative;
+    width: 80%;
+    max-width: 800px; /* Limita el ancho máximo del carousel */
+    margin: auto;
+    overflow: hidden;
 }
 
-.carousel img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Asegura que las imágenes mantengan su proporción */
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
 }
 
 .team-member {
     display: flex;
-    align-items: center;
+    align-items: center; /* Centra verticalmente los elementos */
     margin-bottom: 1em;
+    margin-right: 2em; /* Espacio entre los miembros del equipo */
 }
 
 .team-member img {
     border-radius: 50%;
-    margin-right: 1em;
+    margin-right: 1em; /* Espacio entre la imagen y el texto */
     width: 100px;
     height: 100px;
+}
+
+.team-member p {
+    margin: 0;
 }
 
 footer {
@@ -137,13 +173,14 @@ footer {
         height: auto;
     }
 
-    .carousel {
-        flex-direction: column;
-        align-items: center;
+    .team-member {
+        flex-direction: column; /* En pantallas pequeñas, coloca los elementos en una columna */
+        align-items: center; /* Centra los elementos */
+        text-align: center;
     }
 
-    .carousel img {
-        width: 100%;
-        height: auto;
+    .team-member img {
+        margin-right: 0; /* Elimina el espacio a la derecha de la imagen */
+        margin-bottom: 1em; /* Añade espacio debajo de la imagen */
     }
 }
